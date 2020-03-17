@@ -8,6 +8,7 @@ from pygame.sprite import Group
 from game_stats import GameStats
 from button import Button
 
+
 def run_game():
     # 初始化pygame、设置和屏幕对象
     pygame.init()
@@ -32,7 +33,7 @@ def run_game():
     # 开始游戏的主循环
     while True:
         # 检查玩家的输入
-        gf.check_events(ai_settings, screen, ship, bullets)
+        gf.check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets)
 
         if stats.game_active:
             # 更新飞船的位置
